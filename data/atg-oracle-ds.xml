@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<datasources>
+
+<xa-datasource>
+<jndi-name>atgcore_ds</jndi-name>
+<track-connection-by-tx>true</track-connection-by-tx>
+<isSameRM-override-value>false</isSameRM-override-value>
+<min-pool-size>1</min-pool-size>
+<max-pool-size>15</max-pool-size>
+<blocking-timeout-millis>5000</blocking-timeout-millis>
+<idle-timeout-minutes>30</idle-timeout-minutes>
+<transaction-isolation>TRANSACTION_READ_COMMITTED</transaction-isolation>
+<xa-datasource-class>oracle.jdbc.xa.client.OracleXADataSource</xa-datasource-class>
+<xa-datasource-property name="URL">jdbc:oracle:thin:@localhost:1521:XE</xa-datasource-property>
+<xa-datasource-property name="User">ATGCORE_DS</xa-datasource-property>
+<xa-datasource-property name="Password">ATGCORE_DS</xa-datasource-property>
+<!-- Uncomment the following if you are using Oracle 9i
+<xa-datasource-property name="oracle.jdbc.V8Compatible">true</xa-datasource-property>
+-->
+<exception-sorter-class-name>
+org.jboss.resource.adapter.jdbc.vendor.OracleExceptionSorter
+</exception-sorter-class-name>
+</xa-datasource> 
+</datasources>
